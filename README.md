@@ -23,3 +23,25 @@ spec:
     introspectionEnabled: true                              ## Enable the possibility than OpenShift LightSpeed can interact directlly with the OpenShift cluster
     logLevel: INFO
 ```
+
+## With RHOAI
+```
+apiVersion: ols.openshift.io/v1alpha1
+kind: OLSConfig
+metadata:
+  name: cluster
+spec:
+  llm:
+    providers:
+    - credentialsSecretRef:
+        name: rhoai_api_keys
+      models:
+      - name: granite-7b-redhat-lab
+      name: myRHOAI
+      type: rhoai_vllm
+      url: 'https://granite-7b-redhat-lab-dmartini.apps.cluster-z4kvw.z4kvw.sandbox5419.opentlc.com'
+  ols:
+    hideIcon: true 
+    defaultProvider: red_hat_openshift_ai
+    defaultModel: granite-7b-redhat-lab
+```
