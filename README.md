@@ -44,6 +44,6 @@ spec:
     hideIcon: false
     introspectionEnabled: true                            
     logLevel: INFO 
-    defaultProvider: red_hat_openshift_ai
+    defaultProvider: myRHOAI
     defaultModel: granite-7b-redhat-lab
 ```
