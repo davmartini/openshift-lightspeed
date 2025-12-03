@@ -36,14 +36,14 @@ spec:
     - credentialsSecretRef:
         name: rhoai-api-keys
       models:
-      - name: granite-7b-redhat-lab
+      - name: granite-31-8b-lab-v1
       name: myRHOAI
       type: rhoai_vllm
-      url: 'https://granite-7b-redhat-lab-dmartini.apps.cluster-z4kvw.z4kvw.sandbox5419.opentlc.com'
+      url: 'https://granite-31-8b-lab-v1-dmartini.apps.cluster-z4kvw.z4kvw.sandbox5419.opentlc.com:443/v1'
   ols:
     hideIcon: false
-    introspectionEnabled: true                            
+    introspectionEnabled: false                            
     logLevel: INFO 
     defaultProvider: myRHOAI
-    defaultModel: granite-7b-redhat-lab
+    defaultModel: granite-31-8b-lab-v1
 ```
