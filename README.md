@@ -34,14 +34,16 @@ spec:
   llm:
     providers:
     - credentialsSecretRef:
-        name: rhoai_api_keys
+        name: rhoai-api-keys
       models:
       - name: granite-7b-redhat-lab
       name: myRHOAI
       type: rhoai_vllm
       url: 'https://granite-7b-redhat-lab-dmartini.apps.cluster-z4kvw.z4kvw.sandbox5419.opentlc.com'
   ols:
-    hideIcon: true 
+    hideIcon: false
+    introspectionEnabled: true                            
+    logLevel: INFO 
     defaultProvider: red_hat_openshift_ai
     defaultModel: granite-7b-redhat-lab
 ```
